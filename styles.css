@@ -24,12 +24,17 @@ img {
     font-weight: bolder;
     color: #123456;
 }
+.dashboard-item:hover{
+    cursor: pointer;
+    color: whitesmoke;
+}
 .dashboard {
     font-size: 200%;
-    display: flex;
-    align-items: flex-start;
-    justify-items: center;
+    align-self: start;
     font-family: 'Times New Roman', Times, serif;
+}
+.lists1, .lists2{
+    align-self: start;
 }
 .dashboard>img {
     width: 40px;
@@ -37,18 +42,77 @@ img {
 .sidebar{
     grid-column: 1/2;
     grid-row: 1/3;
-   
     background-image: linear-gradient(#64748b,#94a3b8,#cbd5e1);
     justify-content: center;
     display: grid;
-   grid-template-rows: 0.5fr 0.7fr 1fr;
+   grid-template-rows: 0.45fr 0.7fr 1fr;
 }
 
 .header{
     grid-column: 2/4;
     grid-row: 1/2;
     background-image: linear-gradient(#fca5a5,#fecaca,#fee2e2);
+    display: grid;
+    grid: 1fr 1fr/1fr;
 }
+.header-top{
+    display: grid;
+    grid: 1fr/4fr 1fr;
+    padding: 10px 30px;
+}
+.header-low{
+    display: grid;
+    grid: 1fr/2fr 1fr;
+    padding: 10px 30px;
+}
+.profile-signup>img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+.profile-signup{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+      gap: 10px;  
+      font-weight: bold;
+}
+.search {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+      gap: 5px;
+}
+input{
+    width: 70%;
+    height: 35px;
+    border-radius: 20px;
+    border: 1px none;
+    background-color: lightsalmon;
+}
+.profile-name>img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+.profile-name{
+    display: flex;
+  justify-content: flex-start;
+  align-items: center;
+    gap: 10px;
+    font-weight: bolder;
+}
+button{
+  width: 30%;
+   height: 25px;
+   border: 1px none;
+   border-radius: 10px;
+   background-color: grey;
+   font-weight: bolder;
+   font-size: medium;
+   color: white;
+}
+
 .content{
     grid-column: 2/4;
     grid-row: 2;
