@@ -11,11 +11,12 @@ body {
     display: grid;
     grid-template-columns: 0.4fr 1.6fr ;
     grid-template-rows: 0.5fr 2fr;  
-    height: 100vh;
+    max-height: 100vh;
     
 }
 img {
     width: 25px;
+    
 }
 .dashboard-item {
     display: flex;
@@ -23,11 +24,13 @@ img {
     gap: 5px;
     font-weight: bolder;
     color: #123456;
+    position: relative;
 }
 .dashboard-item:hover{
     cursor: pointer;
     color: whitesmoke;
 }
+
 .dashboard {
     font-size: 200%;
     align-self: start;
@@ -35,6 +38,14 @@ img {
 }
 .lists1, .lists2{
     align-self: start;
+    position: absolute;
+    top: 25%;
+    left: 40px;
+   
+}
+.lists2{
+    position: absolute;
+    top: 70%;
 }
 .dashboard>img {
     width: 40px;
@@ -45,8 +56,11 @@ img {
     background-image: linear-gradient(#64748b,#94a3b8,#cbd5e1);
     justify-content: center;
     display: grid;
-   grid-template-rows: 0.45fr 0.7fr 1fr;
+   grid-template-rows: 0.3fr 0.6fr 1fr;
+  
+   
 }
+
 
 .header{
     grid-column: 2/4;
@@ -54,6 +68,8 @@ img {
     background-image: linear-gradient(#fca5a5,#fecaca,#fee2e2);
     display: grid;
     grid: 1fr 1fr/1fr;
+    
+    z-index: 1;
 }
 .header-top{
     display: grid;
@@ -89,6 +105,7 @@ input{
     border-radius: 20px;
     border: 1px none;
     background-color: lightsalmon;
+    padding: 0 5px 0 10px;
 }
 .profile-name>img{
     width: 50px;
@@ -117,5 +134,92 @@ button{
     grid-column: 2/4;
     grid-row: 2;
     background-image: linear-gradient(#059669,#0891b2,#10b981,#22d3ee,#34d399);
+display: grid;
+grid-template-columns: 1.5fr 0.6fr;
+grid-template-rows: 0.1fr 3fr;
+max-height: 100%;
+column-gap: 50px;
+padding: 20px 10px 50px 20px;
+}
+.proheading{
+    grid-area: 1/1/2/2;
+   
+    color: whitesmoke;
+    align-self: center;
+    
+}
+.cards{
+    grid-area: 2/1/3/2;
+    justify-self: start;
+    align-self: start;
+    display: grid;
+    grid: repeat(3, 0.1fr)/repeat(auto-fit,minmax(300px,1fr));
+    gap: 30px;
+}
+.card{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 0.05fr 1fr 0.3fr;
+    padding: 10px 5px 5px 10px;
+    border: 1px solid black;
+    border-left: 5px solid violet;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px #246;
+    background: whitesmoke;
+   
+}
 
+.cardimg{
+    justify-self: end;
+    align-self: start;
+}
+.sidenotes{
+    grid-area: 1/2/3/3;
+    padding-top: 10px;
+    gap: 40px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    justify-self: center;
+}
+.announcements{
+    grid-area: 1/1/2/2;
+    display: grid;
+    grid-template-rows: 0.05fr,minmax(25px,1fr);
+    grid-template-columns: minmax(5px, 0.7fr);
+    gap: 10px;
+
+}
+.announcards{
+    grid-area: auto;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(25px,1fr));
+    gap: 20px;
+    border: 1px;
+    padding: 10px 5px;
+    background: whitesmoke;
+    border-radius: 15px;
+    box-shadow: 4px 2px 5px burlywood;
+}
+
+.acard {
+    padding-bottom: 15px;
+    border-bottom: 1px solid gray;
+}
+.acard:last-child {
+    border: none;
+}
+
+.trending{
+    grid-area: 2/1/3/2;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: minmax(5px, 0.7fr);
+    gap: 2px;
+
+}
+
+.trendcards{
+    border: 1px solid;
 }
